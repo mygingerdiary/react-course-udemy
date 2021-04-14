@@ -1,125 +1,36 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-// import Radium from "radium";
-import './App.css';
-import Person from './Person/Person';
+import ExpenseItem from "./components/Expenses/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
 
-const StyledButton = styled.button`
-  background-color: ${props => props.alt ? 'red' : 'green'};
-  color: white;
-  font: inherit;
-  border: 1px solid blue;
-  padding: 8px;
-  cursor: pointer;
-  
-  &:hover {
-      background-color: ${props => props.alt ? 'salmon' : 'lightgreen'};
-      color: black;
-`;
-
-class App extends Component {
-    state = {
-        persons: [
-            { id: 'dssd', name: 'Max', age: 28 },
-            { id: 'rfd', name: 'Manu', age: 29 },
-            { id: 'fsf', name: 'Stephanie', age: 26 }
-        ],
-        otherState: 'some other value',
-        showPersons: false
-    }
-
-    nameChangedHandler = (event, id) => {
-        const personIndex = this.state.persons.findIndex(p => {
-            return p.id === id;
-        });
-
-        const person = {
-            ...this.state.persons[personIndex]
-        }; //new object - copy of persons
-
-        // const person = Object.assign({}, this.state.persons[personIndex]);
-
-        person.name = event.target.value;
-
-        const persons = [...this.state.persons]
-        persons[personIndex] = person;
-
-        this.setState( {persons: persons} );
-    }
-
-    deletePersonHandler = (personIndex) => {
-        // const persons = this.state.persons.slice(); //copy of array
-        const persons = [...this.state.persons]; //copy of array
-        persons.splice(personIndex, 1);
-        this.setState({persons: persons});
-    }
-
-    togglePersonsHandler = () => {
-        const doesShow = this.state.showPersons;
-        this.setState({showPersons: !doesShow});
-    }
-
-    render () {
-        // const style = {
-        //   backgroundColor: 'green',
-        //   color: 'white',
-        //   font: 'inherit',
-        //   border: '1px solid blue',
-        //   padding: '8px',
-        //   cursor: 'pointer',
-        //   ':hover': {
-        //       backgroundColor: 'lightgreen',
-        //       color: 'black'
-        //   }
-        // };
-
-        let persons = null;
-
-        if (this.state.showPersons) {
-            persons = (
-                <div>
-                    {this.state.persons.map((person, index) => {
-                        return <Person
-                            click={() => this.deletePersonHandler(index)}
-                            // click={this.deletePersonHandler.bind(this, index)}
-                            name={person.name}
-                            age={person.age}
-                            key={person.id}
-                            changed={(event) => this.nameChangedHandler(event, person.id)} />
-                    })}
-                </div>
-            );
-
-            // style.backgroundColor = 'red';
-            // style[':hover'] = {
-            //     backgroundColor: 'salmon',
-            //         color: 'black'
-            // };
+const App = () => {
+    const expenses = [
+        {
+            title: 'Car Insurance',
+            amount: 294.67,
+            date: new Date(2021, 2, 28)
+        },
+        {
+            title: 'Toilet paper',
+            amount: 3.20,
+            date: new Date(2020, 3, 12)
+        },
+        {
+            title: 'Fruit',
+            amount: 10.03,
+            date: new Date(2021, 1, 3)
+        },
+        {
+            title: 'Something',
+            amount: 123.44,
+            date: new Date(2021, 2, 28)
         }
+    ];
 
-        const classes = []; // result -> "red bold"
-        if (this.state.persons.length <= 2) {
-            classes.push('red'); //classes = ['red']
-        }
-        if(this.state.persons.length <= 1) {
-            classes.push('bold'); // classes = ['red', 'bold']
-        }
-
-        return (
-            <div className="App">
-                <h1>Hi, I'm a React App</h1>
-                <p className={classes.join(' ')}>This is really working!</p>
-                {/*<button*/}
-                {/*    style={style}*/}
-                {/*    onClick={this.togglePersonsHandler}>Toggle persons</button>*/}
-                <StyledButton alt={this.state.showPersons} onClick={this.togglePersonsHandler} >
-                    Toggle Persons
-                </StyledButton>
-                {persons}
-            </div>
-        );
-        // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
-    }
+    return (
+        <div>
+            <h2>Let's get started!</h2>
+            <Expenses expenses={expenses}/>
+        </div>
+    );
 }
 
-export default App; //higher component
+export default App;
