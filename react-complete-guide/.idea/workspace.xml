@@ -20,13 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="477d24a2-6e70-45be-b2ee-8cf7bd7b8b5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpenseItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Expenses/ExpenseItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Expenses/Expenses.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Expenses/Expenses.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewExpense/ExpenseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewExpense/ExpenseForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewExpense/NewExpense.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewExpense/NewExpense.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chart/Chart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chart/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chart/ChartBar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chart/ChartBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpenseDate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpenseDate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpenseItem.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpenseItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/Expenses.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/Expenses.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpensesChart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpensesFilter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpensesFilter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpensesList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Expenses/ExpensesList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewExpense/ExpenseForm.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewExpense/ExpenseForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewExpense/NewExpense.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewExpense/NewExpense.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Card.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +92,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -85,7 +112,7 @@
       <updated>1618402033530</updated>
       <workItem from="1618402035314" duration="7884000" />
       <workItem from="1618615030216" duration="1041000" />
-      <workItem from="1618687310779" duration="15345000" />
+      <workItem from="1618687310779" duration="15662000" />
     </task>
     <servers />
   </component>
@@ -103,5 +130,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="698" y="164" key="SettingsEditor" timestamp="1619038479211">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="698" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1619038479211" />
   </component>
 </project>
