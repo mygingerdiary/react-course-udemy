@@ -1,3 +1,4 @@
+import React from "react";
 import {Fragment, useEffect} from 'react';
 import {useSelector} from "react-redux";
 
@@ -6,7 +7,7 @@ import Layout from './components/Layout/Layout';
 import Products from './components/Shop/Products';
 import {useDispatch} from "react-redux";
 import Notification from "./components/UI/Notofication";
-import {sendCartData} from "./store/cart-slice";
+import {fetchCartData, sendCartData} from "./store/cart-actions";
 
 let isInitial = true;
 
@@ -17,12 +18,18 @@ function App() {
     const notification = useSelector(state => state.ui.notification);
 
     useEffect(() => {
+        dispatch(fetchCartData())
+    }, [dispatch]);
+
+    useEffect(() => {
             if (isInitial) {
                 isInitial = false;
                 return;
             }
 
-            dispatch(sendCartData(cart));
+            if(cart.changed) {
+                dispatch(sendCartData(cart));
+            }
 
         }, [cart, dispatch]);
 
@@ -30,7 +37,11 @@ function App() {
     return (
         <Fragment>
             {notification &&
-            <Notification status={notification.status} title={notification.title} message={notification.message}/>}
+            <Notification
+                status={notification.status}
+                title={notification.title}
+                message={notification.message}
+            />}
             <Layout>
                 {showCart && <Cart/>}
                 <Products/>
