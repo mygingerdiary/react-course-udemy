@@ -6,7 +6,7 @@ import NewTodo from "./components/NewTodo";
 
 function App() {
     const [todos, setTodos] = useState<Todo[]>([]);
-    
+
     const addTodoHandler = (todoText: string) => {
         const newTodo = new Todo(todoText);
 
