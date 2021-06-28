@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 
 import IngredientForm from './IngredientForm';
 import IngredientList from "./IngredientList";
@@ -7,10 +7,14 @@ import Search from './Search';
 function Ingredients() {
     const [userIngredients, setUserIngredients] = useState([]);
 
+    const filteredIngredientsHandler = useCallback(filteredIngredients => {
+        setUserIngredients(filteredIngredients);
+    }, []);
+
     const addIngredientHandler = (ingredient) => {
         fetch('https://hooks-react-2915b-default-rtdb.firebaseio.com/ingredients.json', {
             method: 'POST',
-            body: JSON.stringify({ingredient}),
+            body: JSON.stringify({...ingredient}),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -36,8 +40,11 @@ function Ingredients() {
             <IngredientForm onAddIngredient={addIngredientHandler}/>
 
             <section>
-                <Search/>
-                <IngredientList ingredients={userIngredients} onRemoveItem={removeIngredientHandler}/>
+                <Search onLoadIngredients={filteredIngredientsHandler}/>
+                <IngredientList
+                    ingredients={userIngredients}
+                    onRemoveItem={removeIngredientHandler}
+                />
             </section>
         </div>
     );
